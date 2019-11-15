@@ -3,7 +3,7 @@
 #
 export KERNELPATH=/lib/modules/${shell uname -r}/build
 export KERNELARCH=arm
-export TOOLPREFIX=arm-linux-gnueabi-
+export TOOLPREFIX=arm-poky-linux-gnueabi-
 
 export CONFIG_NO_USE_BACKPORTS=y
 export CONFIG_CFG80211_DEPEND_ON_KERNEL=y

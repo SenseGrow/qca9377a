@@ -2,8 +2,8 @@
 # Please modify KERNELPATH, KERNELARCH and TOOLPREFIX to meet your environment
 #
 export KERNELPATH=/lib/modules/${shell uname -r}/build
-export KERNELARCH=i386
-export TOOLPREFIX=
+export KERNELARCH=arm
+export TOOLPREFIX=arm-linux-gnueabi-
 
 export CONFIG_NO_USE_BACKPORTS=y
 export CONFIG_CFG80211_DEPEND_ON_KERNEL=y

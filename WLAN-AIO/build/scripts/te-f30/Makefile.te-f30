@@ -1,0 +1,26 @@
+# Build list
+
+targetList := drivers drivers_firmware
+targetList += rootfs_build
+
+default: ${targetList}
+
+#################################################################################################################################
+export BE_TEST_TOPDIR=${ATH_TOPDIR}/build/scripts/x86
+export WLAN_DRIVER_TOPDIR=$(ATH_TOPDIR)/drivers
+
+#################################################################################################################################
+#
+# driver patch
+#
+
+drivers_patch:
+	@echo Patch drivers
+drivers_patch_R:
+	@echo Revert drivers patch
+
+wpa_supplicant_config:
+	@cp ${ATH_TOPDIR}/drivers/patches/supplicant/wpa_supplicant.config ${ATH_TOPDIR}/apps/hostap/wpa_supplicant/.config
+	@cp ${ATH_TOPDIR}/drivers/patches/supplicant/hostapd.config ${ATH_TOPDIR}/apps/hostap/hostapd/.config
+#################################################################################################################################
+#
